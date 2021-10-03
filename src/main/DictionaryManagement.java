@@ -9,10 +9,7 @@ import java.util.List;
 
 public class DictionaryManagement {
     public static void main(String[] args) {
-//        Scanner scan = new Scanner(System.in);
-
         DictionaryCommandLine();
-
     }
 
     public static void DictionaryCommandLine() {
