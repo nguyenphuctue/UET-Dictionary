@@ -9,8 +9,7 @@ public class MYSQLConnection {
 
     /**
      * Method Connection.
-     * @return
-     * @throws SQLException
+     * @return connection
      */
     public static Connection getConnection() throws SQLException {
         Connection connection = null;
