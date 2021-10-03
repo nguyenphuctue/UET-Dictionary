@@ -9,3 +9,4 @@ public interface DictionaryRepository {
     int insertWord(String word_target, String word_explain);
     void exportToFile(List<Word> words);
 }
+

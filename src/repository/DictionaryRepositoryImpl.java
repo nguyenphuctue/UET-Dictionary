@@ -92,6 +92,4 @@ public class DictionaryRepositoryImpl implements DictionaryRepository {
             e.printStackTrace();
         }
     }
-
-
 }
