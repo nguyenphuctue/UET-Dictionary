@@ -3,6 +3,8 @@ package repository;
 import connection.MYSQLConnection;
 import model.Word;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -54,5 +56,40 @@ public class DictionaryRepositoryImpl implements DictionaryRepository {
         }
 
         return words;
+    }
+
+    @Override
+    public int insertWord(String word_target, String word_explain) {
+        int row = 0;
+        String query = "INSERT INTO word(word_target, word_explain) VALUE(?, ?)";
+
+        try (Connection connection = MYSQLConnection.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+
+            preparedStatement.setString(1, word_target);
+            preparedStatement.setString(2, word_explain);
+
+            row = preparedStatement.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return row;
+    }
+
+    @Override
+    public void exportToFile(List<Word> words) {
+        try {
+            FileWriter myWriter = new FileWriter("dictionary.txt");
+            for (Word w : words) {
+                myWriter.write(w.toString() + "\n");
+            }
+            myWriter.close();
+            System.out.println("Successfully wrote to the file.");
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
     }
 }

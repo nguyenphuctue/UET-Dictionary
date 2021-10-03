@@ -1,0 +1,13 @@
+No	|English		|Vietnamese
+Word{id=1, word_target='Survey', word_explain='Khảo sát'}
+Word{id=2, word_target='Scenery', word_explain='Phong cảnh'}
+Word{id=3, word_target='Property', word_explain='Bất động sản'}
+Word{id=4, word_target='Associate', word_explain='Kết hợp, Liên kết'}
+Word{id=5, word_target='Desert', word_explain='Hoang mạc'}
+Word{id=11, word_target='House', word_explain='Ngôi nhà'}
+Word{id=12, word_target='Book', word_explain='Quyen'}
+Word{id=13, word_target='Look', word_explain='up'}
+Word{id=14, word_target='', word_explain='go on'}
+Word{id=15, word_target='go', word_explain=' on'}
+Word{id=18, word_target='hello', word_explain='xin'}
+Word{id=19, word_target='time', word_explain='thoi gian'}
